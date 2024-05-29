@@ -123,9 +123,9 @@ setTimeout(() => {
 */
 
 
-  zk.ev.on('call', async (call) => {
+ /* zk.ev.on('call', async (call) => {
     await zk.rejectCall(call[0].id, call[0].from)
-}) 
+}) */
         zk.ev.on("messages.upsert", async (m) => {
             const { messages } = m;
             const ms = messages[0];
@@ -1293,7 +1293,7 @@ await repondre(data.cnt);
             //execution des commandes   
             if (verifCom) {
                 //await await zk.readMessages(ms.key);
-                const cd = evt.cm.find((france) => france.nomCom === (com));
+                const cd = evt.cm.find((king) => king.nomCom === (com));
                 if (cd) {
                     try {
 
@@ -1533,7 +1533,7 @@ ${metadata.desc}
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/commands/" + fichier);
-                            console.log(fichier + " installé ✔️");
+                            console.log(fichier + " installed ✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} could not be loaded for the following reasons  : ${e}`);
